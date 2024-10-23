@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>new Tab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- notion, instgram, youtube, chatgpt, google bard, discord, spotify,
+openeclass-->
+    <div class='sites'>
+        <div class='scroll'>
+            <p class='title'>WEBSITES</p>
+            <button type="submit" onclick="removebookmark()" id="removebtn">Remove a site</button>
+            <!--<span id='links'-->
+            <ul id='links'>
+                <a id='notion' href="https://www.notion.so/PROJECTS-3b686ef2a5c64fbcbe27a40c7cad786e">notion</a>
+                <a id='instagram' href="https://www.instagram.com/?hl=en">Instagram</a>
+                <a id='youtube' href="https://www.youtube.com/e">Youtube</a>
+                <a id='chatgpt' href="https://chat.openai.com/c/50b71e7d-d989-487d-922d-ad3f79aa7cfd">Chatgpt</a>
+                <a id="googlebard" href="https://bard.google.com/chat">Google bard</a>
+                <a id="spotify" href="https://open.spotify.com/collection/tracks">Spotify</a>
+                <a id="discord" href="https://discord.com/channels/@me">Discord</a>
+                <a id="twitter" href="https://twitter.com/home">twitter</a>
+            </ul>
+            <!--/span>-->
+            <button type="submit" onclick="addbookmark()" id="bookmarkbtn">Add Website</button>
+        </div>
+    </div>
+    <div class='widgets'>
+        <div id="weather-container">
+            <h2 class="wtitle">Weather</h2>
+            <input type="text" id="city" placeholder="Enter city">
+            <button onclick="getWeather()">Search</button>
+            <img id="weather-icon" alt="Weather Icon">
+
+            <div id="temp-div"></div><!--will be holding temperature-->
+            <div id="weather-info"></div><!-- what is going on in the city weatherly-->
+            <div id="hourly-forecast"></div><!--hour-->
+        </div>
+
+        <div id="quote-container">
+            <h2 class="title_quote">Quote</h2>
+            <p id="the_quote"></p>
+            <button onclick="randomquote()">Random Quote</button>
+        </div>
+        <div id='title_todo'>
+            <h1 class='title'>TO DO LIST</h1>
+            <div class='overall_container'>
+                <div class='input_submit'>
+                    <input id='input-field' type="text" placeholder="Insert your errands!">
+                    <button onClick="addTask()" type='submit' id='btn'>Add Errand</button>
+                </div>
+                <div class='to_do_container'>
+                    <ul id ="list-container">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!--b713d7805843966760720f10e1b2eb88-->
