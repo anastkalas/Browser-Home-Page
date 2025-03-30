@@ -12,7 +12,6 @@ openeclass-->
     <div class='sites'>
         <div class='scroll'>
             <p class='title'>WEBSITES</p>
-            <button type="submit" onclick="removebookmark()" id="removebtn">Remove a site</button>
             <!--<span id='links'-->
             <ul id='links'>
                 <a id='notion' href="https://www.notion.so/PROJECTS-3b686ef2a5c64fbcbe27a40c7cad786e">notion</a>
@@ -25,12 +24,15 @@ openeclass-->
                 <a id="twitter" href="https://twitter.com/home">twitter</a>
             </ul>
             <!--/span>-->
-            <button type="submit" onclick="addbookmark()" id="bookmarkbtn">Add Website</button>
+            <div class="add-remove">
+                <button type="submit"  id="removebtn" onClick="removebookmark()">Remove a site</button>
+                <button type="submit"  id="bookmarkbtn" onclick="addbookmark()">Add Website</button>
+            </div>
         </div>
     </div>
-    <div class='widgets'>
+    <!--<div class='widgets'>-->
         <div id="weather-container">
-            <h2 class="wtitle">Weather</h2>
+            <h1 class="wtitle">Weather</h1>
             <input type="text" id="city" placeholder="Enter city">
             <button onclick="getWeather()">Search</button>
             <img id="weather-icon" alt="Weather Icon">
@@ -38,12 +40,6 @@ openeclass-->
             <div id="temp-div"></div><!--will be holding temperature-->
             <div id="weather-info"></div><!-- what is going on in the city weatherly-->
             <div id="hourly-forecast"></div><!--hour-->
-        </div>
-
-        <div id="quote-container">
-            <h2 class="title_quote">Quote</h2>
-            <p id="the_quote"></p>
-            <button onclick="randomquote()">Random Quote</button>
         </div>
         <div id='title_todo'>
             <h1 class='title'>TO DO LIST</h1>
@@ -58,9 +54,7 @@ openeclass-->
                 </div>
             </div>
         </div>
-    </div>
+    <!--</div>-->
     <script src="script.js"></script>
 </body>
 </html>
-
-<!--b713d7805843966760720f10e1b2eb88-->
