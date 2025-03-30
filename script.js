@@ -1,19 +1,4 @@
-function removebookmark(){
-    var name=prompt("The bookmark you would like to delete:");
-    console.log(name);
-
-    var tag=document.getElementById(name);
-
-    if(tag){
-        tag.parentNode.removeChild(tag);
-        localStorage.removeItem(name);
-    }
-    else{
-        alert("Bookmark not found!");
-    }
-
-}
-
+window.onload=loadBookmarks();//every time page loads the existing bookmarks are loaded
 
 function loadBookmarks() {
     //get container where bookmarks will be displayed
@@ -44,8 +29,22 @@ function loadBookmarks() {
         }
     }
 }
-//every time page loads the existing bookmarks are loaded
-window.onload=loadBookmarks;
+
+function removebookmark(){
+    var name=prompt("The bookmark you would like to delete:");
+    console.log(name);
+
+    var tag=document.getElementById(name);
+
+    if(tag){
+        tag.parentNode.removeChild(tag);
+        localStorage.removeItem(name);
+    }
+    else{
+        alert("Bookmark not found!");
+    }
+
+}
 
 
 function addbookmark() {
@@ -53,7 +52,7 @@ function addbookmark() {
     let name = window.prompt("Enter the name of the website:");
 
     if (!url) {
-        alert("Please enter the URL of a website!");
+        alert("No Bookmark was added!!!");
         return;
     }
 
@@ -200,9 +199,8 @@ function displayHourlyForecast(hourlyData) {
 
         const hourlyItemHtml = `
             <div class="hourly-item">
-                <span>${hour}:00</span>
                 <img src="${iconUrl}" alt="Hourly Weather Icon">
-                <span>${temperature}°C</span>
+                <span>${temperature}°C ${hour}:00</span>
             </div>
         `;
 
@@ -213,16 +211,6 @@ function displayHourlyForecast(hourlyData) {
 function showImage() {
     const weatherIcon = document.getElementById('weather-icon');
     weatherIcon.style.display = 'block'; // Make the image visible once it's loaded
-}
-
-async function randomquote(){
-    const apikey="https://api.quotable.io/random";
-    const quote=document.getElementById("the_quote");
-    const response=await fetch(apikey);
-    var data=await response.json();
-    console.log(data.content);
-    quote.innerHTML=data.content;
-
 }
 
 const inputbox=document.getElementById("input-field");//get access to the input-field
