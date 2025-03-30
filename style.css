@@ -1,304 +1,200 @@
-body{
-	margin: 0;
-	padding: 0;
-	background: url("R.jfif") center center/cover no-repeat;
-	overflow: hidden;
+*{
+    padding: 0;
+    margin: 0;
 }
 
-.widgets{
-	display: flex;
-	flex-wrap: wrap;
-	height: -90vh;
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    background-image: url('R.jfif');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 80vh;
 }
 
 .sites{
-	display: flex;
-	flex-direction: column;
-	background: #333;
-	align-items: flex-start;
-	width: 12vw;
-	height:100vh;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    height: 100vh;
+    background-color: black;
+    color: orange;
+    border-top: 5px orange solid;
+    border-right: 5px orange solid;
+    border-radius: 0 30px 30px 0;
 }
 
 .sites .title{
-	font-size: 40px;
-	color: orange;
-}
-.sites .links{
-	margin-top: 150px;
-}
-.sites #links a{
-	text-decoration: none;
-	font-size: 30px;
-	color: orange;
-	display: block;
-	text-align: center;
-	padding-top: 30px;
-	width: 200px;
+    font-size: 50px;
+    padding-top: 0.8vh;
+    margin-left: 0.5vw;
+    color: orange;
 }
 
-#removebtn{
-	background: orange;
-	font-size: 18px;
-	margin-left: 25%;
-	margin-top: 15px;
+#links{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2vh;
 }
 
-#removebtn:hover{
-	background: #444;
-	color: orange;
+a{
+    color: orange;
+    margin-top: 1vh;
+    margin-left: 2vw;
+    font-size: 35px;
+    text-decoration: none;
 }
 
-.sites .scroll{
-	height: 100vh;
-	overflow: scroll;
-	overflow-x:hidden;
-	background: black;
-	color: white;
+.add-remove{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4vh;
 }
 
-.sites #links a:hover{
-	background: #444;
+.add-remove button{
+    margin-top: 2vh;
+    font-size: 25px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: orange;
+    margin-left: 2vw;
+    margin-right: 2vw;
 }
 
-#bookmarkbtn{
-
-	background: orange;
-	font-size: 18px;
-	margin-left: 25%;
-	margin-top: 40px;
-}
-
-#bookmarkbtn:hover{
-	background: #444;
-	color: orange;
-}
+/* WEATHER STYLING */
 
 #weather-container{
-	height: 20vh;
-	background: rgba(255,255,255,0.3);
-	width: 500px;
-	padding:20px;
-	border-radius:15px;
-	box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-	backdrop-filter: blur(10px);
-	border: 1px solid rgba(255,255,255,0.1);
-	text-align: center;
-	margin-left: 16%;
-	margin-top: -95vh;
+    background: rgba(255,255,255,0.1);
+    width: 25vw;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 6vh;
+    margin-bottom: 40vh;
+    border-radius: 20px;
+    margin-left: -8vw;
+    box-shadow: 0 8px 32px rgba(0,0,0,1);
+    backdrop-filter: blur(10px);
 }
 
-h2, label, p{
-	color: #fff;
-	margin: 8px 0;
+#weather-container h2, label, p{
+    color: #fff;
+    margin: 8px 0;
 }
 
-input{
-	width: calc(100% - 16px);
-	padding: 8px;
-	box-sizing: border-box;
-	border-radius: 10px;
-	border: 1px solid white;
-	margin-top: 20px;
+#weather-container .wtitle{
+    font-size: 35px;
 }
 
-
-button{
-	background: #debff4;
-	color: black;
-	padding: 10px;
-	border: none;
-	border-radius: 10px;
-	cursor: pointer;
-	margin-top: 20px;
-	width: 100px;
-	font-size: 15px;
+#weather-container #city{
+    margin-top: 2vh;
+    font-size: 25px;
+    border-radius: 20px;
+    border: 0px;
 }
 
-button:hover{
-	background: #8b48d7;
+#weather-container button{
+    height: 5vh;
+    width: 6vw;
+    font-size: 25px;
+    margin-top: 2vh;
+    border-radius: 10px;
+    border: 0px;
+    cursor: pointer;
+}
+
+#weather-container button:hover{
+    background: #8d48d7;
 }
 
 #temp-div p{
-	font-size: 60px;
-	margin-top: -30px;
+    font-size: 60px;
+    margin-top: -30px;
 }
 
 #weather-info{
-	font-size: 20px;
+    font-size: 20px;
 }
 
 #weather-icon{
-	width: 200px;
-	height:200px;
-	margin: 0 auto 10px;
-	margin-bottom: 0;
-	display: none;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 10px;
+    margin-bottom: 0;
+    display: none;
 }
 
 #hourly-forecast{
-	margin-top: 50px;
-	overflow-x: auto;
-	white-space: nowrap;
-	display: flex;
-	justify-content: space-between;
+    margin-top: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+    max-width: 20vw;
 }
 
 .hourly-item{
-	flex: 0 0 auto;
-	width: 80px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin-right: 10px;
-	color: white;
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 10px;
+    color: black;
 }
 
 #hourly-item img{
 	width: 30px;
-	height: 30px;
+	height: 25px;
 	margin-bottom: 5px;
 }
 
 #hourly-heading{
-	color:#fff;
-	margin-top: 10px;
+    color: #fff;
+    margin-top: 10px;
 }
 
-#quote-container{
-	background: rgba(255,255,255,0.3);
-	padding:20px;
-	border-radius:15px;
-	backdrop-filter: blur(10px);
-	border: 1px solid rgba(255,255,255,0.1);
-	text-align: center;
-	margin-left: 10vw;
-	margin-top: -30vh;
-	box-sizing: border-box;
-	height: 23vh;
-	width: 400px;
-}
-
-#quote-container p{
-
-	font-size: 20px;
-}
-
+/*TODO LIST STYLING */
 #title_todo{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	position:  left;
-	background: rgba(255,255,255,0.3);
-	border-radius: 20px;
-	width: 600px;
-	margin-left: 50vw;
-	margin-top: -75vh;
-	height: 700px;
-	margin-top: -40%;
-}
-.title{
-	font-size: 30px;
-	color: white;
-	padding-top: -60px;
-}
-
-.overall_container{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding-top: 30px;
-	width: 600px;
-	margin-top: 30px;
-	border-radius: 15px;
-}
-
-
-#btn{
-	border-radius: 10px;
-	height: 45px;
-	width: 150px;
-	font-size: 18px;
-	margin-top: 15px;
-}
-
-#btn:hover{
-	background: black;
-	color: white;
-	outline: none;
-	border: 1px;
-}
-
-.input_submit{
-	margin-bottom: 20px;
-	display: flex;
-	justify-content: center;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,1);
+    backdrop-filter: blur(10px);
+    width: 25vw;
+    margin: 0 10px;
+    text-align: center;
+    border-radius: 30px;
+    margin-right: 10vw;
+    margin-bottom: 67vh;
 
 }
 
-#input-field{
-	height: 40px;
-	border-radius: 10px;
-	border: 1px;
-	outline: none;
-	font-size: 20px;
-	margin-right: 20px;
-	width: 350px;
+#title_todo .input_submit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3vh;
 }
 
-.to_do_container{
-	width: 600px;
+#title_todo .input_submit #input-field{
+    margin-top: 2vh;
+    font-size: 25px;
+    border-radius: 10px;
+    border: 0px;
 }
 
-
-ul li{
-	list-style: none;
-	font-size: 20px;
-	padding: 12px 8px 12px 50px;
-	user-select: none;
-	cusron: pointer;
-	position: relative;
+#title_todo .input_submit #btn{
+    height: 5vh;
+    width: 7vw;
+    font-size: 25px;
+    margin-top: 2vh;
+    border-radius: 10px;
+    border: 0px;   
 }
 
-
-ul li::before{
-	content: '';
-	position: absolute;
-	height: 28px;
-	width: 28px;
-	border-radius: 50px;
-	background-image: url(images/unchecked.png);
-	background-size: cover;
-	background-position: center;
-	left: 8px;
-	top: 12px;
-
-}
-
-ul li.checked{
-	color: white;
-	text-decoration: line-through;
-}
-
-ul li.checked::before{
-	background-image: url(images/checked.jfif);
-}
-
-ul li span{
-	position: absolute;
-	right: 0;
-	top: 5px;
-	width: 40px;
-	height: 40px;
-	font-size: 22px;
-	color: #555;
-	line-height: 40px;
-	text-align: center;
-
-}
-
-ul li span:hover{
-	background: #edeef0;
+#title_todo .input_submit #btn:hover{
+    background: #8d48d7;
 }
